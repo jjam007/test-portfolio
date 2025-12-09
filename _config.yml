@@ -1,0 +1,6 @@
+title: My Portfolio
+theme: null
+exclude:
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
