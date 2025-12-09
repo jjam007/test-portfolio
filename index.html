@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio: Creative Developer</title>
-    <meta name="description" content="웹 개발자 포트폴리오입니다. 창의적이고 기능적인 웹사이트를 만듭니다.">
+    <title>Design Portfolio</title>
+    <meta name="description" content="Minimalist Design Portfolio">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -20,7 +20,7 @@
 
     <div id="loader">
         <div class="loader-content">
-            <span class="loader-text">MY PORTFOLIO</span>
+            <span class="loader-text">DESIGN PORTFOLIO</span>
             <div class="loader-bar">
                 <div class="loader-progress"></div>
             </div>
@@ -28,13 +28,18 @@
     </div>
 
     <nav id="navbar">
-        <div class="logo">MY</div>
+        <!-- Logo/Title on Left is removed to match image style where title is big in hero -->
+        <div class="logo"></div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
+            <!-- Navigation items can be simplified or removed to match the minimal image -->
             <li><a href="#about">About</a></li>
             <li><a href="#works">Works</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="logo-right"
+            style="font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.2rem; color: var(--text-color);">
+            YoshaPohan
+        </div>
         <div class="hamburger">
             <span></span>
             <span></span>
@@ -48,14 +53,32 @@
         <section id="home" class="hero">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    <span class="reveal-text">Creative</span>
-                    <span class="reveal-text">Developer</span>
-                    <span class="reveal-text">& Designer.</span>
+                    <span class="reveal-text">Design</span>
+                    <span class="reveal-text">Portfolio</span>
                 </h1>
-                <p class="hero-subtitle">웹을 통해 새로운 가치를 만듭니다.</p>
-                <a href="#works" class="btn-primary">View My Work</a>
             </div>
-            <div class="hero-background"></div>
+            <!-- Bottom Info Columns matching the image -->
+            <div class="hero-footer"
+                style="position: absolute; bottom: 50px; left: 50px; right: 50px; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; color: var(--text-color);">
+                <div class="info-col">
+                    <h4 style="font-weight: 700; margin-bottom: 10px;">Tentang</h4>
+                    <p>Yoshapohan Design Portfolio</p>
+                    <p>Graphic Designer</p>
+                    <p>2019/2025</p>
+                </div>
+                <div class="info-col">
+                    <h4 style="font-weight: 700; margin-bottom: 10px;">Kontak</h4>
+                    <p>osacuenk46@gmail.com</p>
+                    <p>yoshanandamus thafa@outlook.com</p>
+                    <p>+62 823 13117390</p>
+                </div>
+                <div class="info-col">
+                    <h4 style="font-weight: 700; margin-bottom: 10px;">Tentang</h4>
+                    <p>Instagram.com/muhmusthafayoshananda</p>
+                    <p>Behance.net/yoshapohannetwork</p>
+                    <p>Linkedin.com/muhmusthafayoshananda</p>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="section">
@@ -67,15 +90,9 @@
                         <p>
                             사용자 경험(UX)을 최우선으로 생각하며, 심미적이고 기능적인 웹사이트를 구현하는 것을 목표로 합니다.
                             HTML, CSS, JavaScript를 비롯한 최신 웹 기술을 활용하여 아이디어를 현실로 만듭니다.
-                            끊임없이 변화하는 웹 트렌드를 학습하고, 더 나은 코드를 작성하기 위해 노력합니다.
-                        </p>
-                        <br>
-                        <p>
-                            협업을 중요하게 생각하며, 클라이언트 및 팀원과의 원활한 소통을 통해 최상의 결과물을 만들어냅니다.
                         </p>
                     </div>
                     <div class="about-image">
-                        <!-- Placeholder for About Image -->
                         <div class="img-placeholder">Developer Profile</div>
                     </div>
                 </div>
@@ -92,7 +109,7 @@
                         </div>
                         <div class="project-info">
                             <h3>E-commerce Platform</h3>
-                            <p>사용자 친화적인 UI/UX를 적용한 온라인 쇼핑몰. 장바구니, 결제 시스템 연동.</p>
+                            <p>사용자 친화적인 UI/UX를 적용한 온라인 쇼핑몰.</p>
                         </div>
                     </article>
                     <article class="project-card">
@@ -101,7 +118,7 @@
                         </div>
                         <div class="project-info">
                             <h3>Personal Portfolio</h3>
-                            <p>인터랙티브한 애니메이션과 반응형 디자인이 적용된 개인 포트폴리오 사이트.</p>
+                            <p>인터랙티브한 애니메이션과 반응형 디자인.</p>
                         </div>
                     </article>
                     <article class="project-card">
@@ -110,7 +127,7 @@
                         </div>
                         <div class="project-info">
                             <h3>Admin Dashboard</h3>
-                            <p>데이터 시각화 및 효율적인 관리를 위한 관리자 대시보드 UI 디자인 및 구현.</p>
+                            <p>데이터 시각화 및 효율적인 관리자 대시보드.</p>
                         </div>
                     </article>
                 </div>
