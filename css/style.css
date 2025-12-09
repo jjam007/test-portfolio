@@ -271,12 +271,31 @@ body.hovered #cursor-follower {
 .img-placeholder {
     width: 100%;
     height: 400px;
-    background-color: var(--dark-concrete);
+    background: linear-gradient(45deg, var(--dark-concrete), #3a3a3a);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--concrete-color);
     font-family: var(--font-display);
+    position: relative;
+    overflow: hidden;
+}
+
+.img-placeholder::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    100% {
+        left: 100%;
+    }
 }
 
 /* Works */
@@ -288,7 +307,6 @@ body.hovered #cursor-follower {
 
 .project-card {
     position: relative;
-    group: hover;
 }
 
 .project-image {
@@ -343,6 +361,21 @@ footer {
     border-top: 1px solid var(--dark-concrete);
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--text-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title {
@@ -358,7 +391,62 @@ footer {
     }
 
     .nav-links {
-        display: none;
-        /* Mobile menu implementation needed */
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--bg-color);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.5s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+        opacity: 0;
+    }
+
+    .nav-links.active li {
+        animation: fadeIn 0.5s forwards;
+    }
+
+    .nav-links.active li:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+
+    .nav-links.active li:nth-child(2) {
+        animation-delay: 0.3s;
+    }
+
+    .nav-links.active li:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    .nav-links.active li:nth-child(4) {
+        animation-delay: 0.5s;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
     }
 }
